@@ -61,12 +61,12 @@ public class JwtService {
     }
 
 
-    public boolean isTokenValid(String token) {
-        try {
-            Jwts.parserBuilder().setSigningKey(getSigningKey()).build().parseClaimsJws(token);
-            return !isTokenExpired(token);
-        } catch (JwtException e) {
-            return false;
-        }
-    }
+//    public boolean isTokenValid(String token) {
+//        try {
+//            Jwts.parserBuilder().setSigningKey(getSigningKey()).build().parseClaimsJws(token);
+//            return !isTokenExpired(token);
+//        } catch (JwtException e) {
+//            return false;
+//        }
+//    }
 }

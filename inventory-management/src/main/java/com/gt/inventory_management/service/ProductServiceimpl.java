@@ -26,7 +26,7 @@ public class ProductServiceimpl implements ProductService {
     @Autowired
     private TransactionLogService transactionLogService;
 
-    //Add Product
+     //Add Product
     public ProductDTO addProduct(ProductDTO productDTO) {
         Product product = ProductMapper.toProduct(productDTO);
         product.setCreatedAt(Instant.now());

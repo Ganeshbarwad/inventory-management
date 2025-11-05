@@ -11,16 +11,15 @@ import java.math.BigDecimal;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    // ✅ Filtering by Category (Paginated)
+
     Page<Product> findByCategoryContainingIgnoreCase(String category, Pageable pageable);
 
-    // ✅ Filtering by Brand (Paginated)
+
     Page<Product> findByBrandContainingIgnoreCase(String brand, Pageable pageable);
 
-    // ✅ Filtering by Price Range (Paginated)
+
     Page<Product> findByPriceBetween(BigDecimal minPrice, BigDecimal maxPrice, Pageable pageable);
 
-    // ✅ Combined Filter (Category + Brand + Price Range)
     Page<Product> findByCategoryContainingIgnoreCaseAndBrandContainingIgnoreCaseAndPriceBetween(
             String category,
             String brand,

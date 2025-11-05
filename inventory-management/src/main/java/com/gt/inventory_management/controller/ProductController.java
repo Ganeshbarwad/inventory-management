@@ -30,7 +30,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    // ✅ Updated for pagination & filtering
+
     @PreAuthorize("hasAnyRole('ADMIN', 'DEALER', 'CUSTOMER')")
     @GetMapping
     public ResponseEntity<Page<ProductDTO>> getAllProducts(
@@ -57,7 +57,7 @@ public class ProductController {
         return ResponseEntity.ok("Product deleted successfully!");
     }
 
-    //@PreAuthorize("hasRole('DEALER')")
+
     @PatchMapping("/{id}/stock")
     public ResponseEntity<String> updateStock(@PathVariable Long id, @RequestParam int quantity) {
         productService.updateStock(id, quantity);
