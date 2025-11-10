@@ -57,7 +57,7 @@ class ProductServiceImplTest {
     void testAddProduct() {
         when(productRepository.save(any(Product.class))).thenReturn(sampleProduct);
 
-        ProductDTO result = productService.addProduct(sampleDTO);
+        Product result = productService.addProduct(sampleDTO);
 
         assertNotNull(result);
         assertEquals("Laptop", result.getName());

@@ -27,12 +27,12 @@ public class ProductServiceimpl implements ProductService {
     private TransactionLogService transactionLogService;
 
      //Add Product
-    public ProductDTO addProduct(ProductDTO productDTO) {
+    public Product addProduct(ProductDTO productDTO) {
         Product product = ProductMapper.toProduct(productDTO);
         product.setCreatedAt(Instant.now());
         product.setUpdatedAt(Instant.now());
-        productRepository.save(product);
-        return ProductMapper.toDTO(product);
+
+        return productRepository.save(product);
     }
 
 
@@ -132,7 +132,7 @@ public class ProductServiceimpl implements ProductService {
     public List<Product> lowStockAlert() {
         List<Product> products=productRepository.findAll();
 
-        List<Product> lowStockProducts= new ArrayList<>();
+        List<Product> lowStockProducts = new ArrayList<>();
         for(Product product : products){
             if (product.getQuantity()<product.getMinStockLevel()){
               lowStockProducts.add(product);

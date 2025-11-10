@@ -1,4 +1,4 @@
-package com.gt.inventory_management.Security;
+package com.gt.inventory_management.service;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

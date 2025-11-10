@@ -20,7 +20,7 @@ public class ProductController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
-    public ResponseEntity<ProductDTO> addProduct(@RequestBody ProductDTO dto) {
+    public ResponseEntity<Product> addProduct(@RequestBody ProductDTO dto) {
         return ResponseEntity.ok(productService.addProduct(dto));
     }
 

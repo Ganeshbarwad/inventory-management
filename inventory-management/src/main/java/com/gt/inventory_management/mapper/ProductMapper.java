@@ -8,7 +8,6 @@ public class ProductMapper {
 
     public static ProductDTO toDTO(Product product){
         ProductDTO dto=new ProductDTO();
-
         dto.setId(product.getId());
         dto.setName(product.getName());
         dto.setCategory(product.getCategory());
@@ -16,9 +15,9 @@ public class ProductMapper {
         dto.setBrand(product.getBrand());
         dto.setPrice(product.getPrice());
         dto.setQuantity(product.getQuantity());
-        dto.setMinStockLevel(product.getMinStockLevel());
         dto.setCreatedAt(product.getCreatedAt());
         dto.setUpdatedAt(product.getUpdatedAt());
+        dto.setMinStockLevel(product.getMinStockLevel());
         dto.setDealerId(product.getDealerId());
         return dto;
     }

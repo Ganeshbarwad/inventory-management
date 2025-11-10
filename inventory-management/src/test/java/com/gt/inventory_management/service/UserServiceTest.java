@@ -1,6 +1,5 @@
 package com.gt.inventory_management.service;
 
-import com.gt.inventory_management.Security.JwtService;
 import com.gt.inventory_management.dto.LoginRequestDTO;
 import com.gt.inventory_management.dto.LoginResponseDTO;
 import com.gt.inventory_management.dto.RegisterRequestDTO;
@@ -16,7 +15,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;

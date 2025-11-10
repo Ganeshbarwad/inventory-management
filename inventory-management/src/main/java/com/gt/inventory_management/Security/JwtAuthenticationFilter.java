@@ -1,6 +1,7 @@
 package com.gt.inventory_management.Security;
 
 import com.gt.inventory_management.config.MyUserDetailsService;
+import com.gt.inventory_management.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -17,7 +17,7 @@ public interface ProductService {
 
     Page<ProductDTO> getAllProducts(String category, String brand, Double minPrice, Double maxPrice, int page, int size);
 
-    ProductDTO addProduct(ProductDTO dto);
+    Product addProduct(ProductDTO dto);
 
     List<Product> lowStockAlert();
 
